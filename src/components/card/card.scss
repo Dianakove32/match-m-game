@@ -36,7 +36,9 @@
   height: 100%;
   backface-visibility: hidden ;
   border-radius: inherit;
-
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
   &__front {
 
@@ -45,9 +47,10 @@
   &__back {
 
     background-color: rgb(139, 104, 104);
-    //background-image: url("./assets/front.png");
+    background-image: url("../../../public/assets/front.png");
     background-position: center;
     background-size: cover;
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
+
   }
 }

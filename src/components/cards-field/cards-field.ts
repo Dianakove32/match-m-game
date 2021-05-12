@@ -1,7 +1,7 @@
 import { BaseComponent } from "../base-components";
 import { Card } from "../card/card";
 import './cards-field.scss'
-
+const SHOW_TIME = 5;
 export class CardsField extends BaseComponent{
   static element(element: any) {
     throw new Error("Method not implemented.");
@@ -18,6 +18,9 @@ export class CardsField extends BaseComponent{
     this.cards = card;
     this.cards.forEach((card)=> {
       this.element.appendChild(card.element)
+      setTimeout(()=> {
+        this.cards.forEach((card)=> card.flipToBack())
+      }, SHOW_TIME * 1000)
       })
     }
 }
