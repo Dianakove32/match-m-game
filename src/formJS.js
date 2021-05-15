@@ -1,4 +1,4 @@
-import { getData } from './components/form';
+import { getData} from './components/form';
 
 // const btn = document.getElementById('btn-register');
 // // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types

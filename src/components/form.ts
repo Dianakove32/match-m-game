@@ -3,6 +3,8 @@ import { App } from '../app';
 let btnRegister: HTMLElement;
 let btnGame: HTMLElement;
 let btnStop: HTMLElement;
+let liOutput: HTMLElement;
+let inputName: HTMLElement;
 export function getData():void {
   // const input = document.querySelector('.inputName');
   btnRegister = document.getElementById('btn-register')!;
@@ -10,7 +12,9 @@ export function getData():void {
   btnGame = document.getElementById('btn-start')!;
   btnGame.style.display = 'block';
   btnStop = document.getElementById('btn-stop')!;
-  let timerId;
+  liOutput = document.querySelector('.li')!;
+  inputName = document.querySelector('.inputName')!;
+  liOutput.innerHTML = inputName.value;
   btnGame?.addEventListener('click', () => {
     const appElement = document.getElementById('app');
     if (!appElement) throw Error('App root element not found');
@@ -19,18 +23,9 @@ export function getData():void {
     new App(appElement).start();
     btnGame.style.display = '';
     btnStop.style.display = 'block';
-    // let i = 0;
-
-    // timerId = setInterval(() => {
-    //   console.log(i++);
-    // }, 1000);
   });
   btnStop?.addEventListener('click', () => {
     btnStop.style.display = '';
     btnGame.style.display = 'block';
-
-    //clearInterval(timerId);
   });
-
-  // console.log(input.value);
 }
