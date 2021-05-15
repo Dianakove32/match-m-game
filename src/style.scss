@@ -9,7 +9,8 @@ html {
 body {
  // background-color: rgb(62, 115, 119);
  //min-height: 100vh;
-  color: white;
+  //color: white;
+   color: rgb(54, 51, 51);
 
 }
 main{
@@ -27,5 +28,8 @@ footer{
   color: black;
 }
 .btn-start{
+  display: none;
+}
+.btn-stop{
   display: none;
 }
