@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-color: rgb(62, 115, 119);
+ // background-color: rgb(62, 115, 119);
  //min-height: 100vh;
   color: white;
 
@@ -23,3 +23,9 @@ footer{
   height: 2rem;
 }
 
+.title-form{
+  color: black;
+}
+.btn-start{
+  display: none;
+}

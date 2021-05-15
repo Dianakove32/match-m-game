@@ -17,6 +17,7 @@ export class Game extends BaseComponent {
     this.element.appendChild(this.cardsField.element);
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   newGame(images: string[]) {
   // timer, score
     this.cardsField.clear();
