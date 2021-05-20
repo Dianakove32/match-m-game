@@ -9,24 +9,22 @@ export function locationResolver(location: string) {
   // eslint-disable-next-line default-case
   switch (location) {
     case '#/ruls/': {
-      getRuls();
       app.innerHTML = `
-<h1>${location}</h1>
-<p>Rulls</p>
-`;
-      break;
+      <div>${getRuls()}</div>
+      `;
+    break;
     }
     case '#/score/': {
       app.innerHTML = `
-<h1>${location}</h1>
+<h3>${location}</h3>
 <p>score</p>
 `;
       break;
     }
     case '#/settings/': {
       app.innerHTML = `
-<h1>${location}</h1>
-<p>secccccccccccc</p>
+<h3>${location}</h3>
+<p>settings </p>
 `;
       break;
     }
