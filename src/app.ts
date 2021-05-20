@@ -1,6 +1,7 @@
 import { Game } from './components/game/game';
 import { ImageCategoryModel } from './components/modals/image-category-modals';
 import { getRuls } from './components/ruls/ruls';
+
 export class App {
   private readonly game : Game;
 
@@ -18,5 +19,4 @@ export class App {
     const images = cat.images.map((name) => `${cat.category}/${name}`);
     this.game.newGame(images);
   }
-
 }

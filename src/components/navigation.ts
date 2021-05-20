@@ -5,7 +5,6 @@ const aboutBtn: Element | null = document.querySelector('.about');
 
 export function navigation():void {
   aboutBtn?.addEventListener('click', () => {
-
     getRuls(rulsArr);
   });
 }
