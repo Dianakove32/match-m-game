@@ -6,7 +6,19 @@
       "eleph.png",
       "ping.png",
       "lion.png",
-      "volf.png"
+      "volf.png",
+      "1.png"
+    ]
+  },
+  {
+    "category": "Cars",
+    "images": [
+      "Tesla-Roadster-2020-1024-03.jpg",
+      "_117684205_lotus.jpg",
+      "1_title_2020_kia_optima.jpg",
+"2.jpg",
+"3.jpg",
+"4.jpg"
     ]
   }
 ]

@@ -21,7 +21,7 @@ export function getData():void {
   liOutput.innerHTML = inputName.value;
   inputName?.addEventListener('change', (e) => {
     // eslint-disable-next-line no-alert
-    console.log('test')
+
   });
   btnGame?.addEventListener('click', () => {
     const appElement = document.getElementById('app');

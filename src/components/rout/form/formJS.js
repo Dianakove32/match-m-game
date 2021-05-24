@@ -8,6 +8,8 @@ const myModal = document.getElementById('btn-register');
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function form() {
   myModal.addEventListener('click', () => {
+
+
     // const modal = document.querySelector('.modal');
     // console.log(modal)
     const modalDialog = document.querySelector('.modal-dialog');
