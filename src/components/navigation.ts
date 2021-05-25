@@ -1,8 +1,8 @@
 import { locationResolver } from './rout/locationResolver';
 
-const app = document.getElementById('main');
+const app: HTMLElement | null = document.getElementById('main')!;
 
-export function navigation() {
+export function navigation():void {
   app.innerHTML = `
   <nav class="navbar navbar-dark navbar-expand-lg navbar-light bg-primary">
   <div class="container-fluid">
@@ -119,7 +119,6 @@ export function navigation() {
 
   document.querySelectorAll('.nav-link')?.forEach((x) => x.addEventListener('click', (e) => {
     const newLocation = e.view.location.hash;
-    console.log(newLocation);
     locationResolver(newLocation);
   }));
 }

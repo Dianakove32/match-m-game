@@ -40,13 +40,25 @@ export class Game extends BaseComponent {
     }
 
     if (this.activeCard.image !== card.image) {
-    //   this.activeCard. сделать ошибку красную карточку
+      const activC = this.activeCard.element;
+      activC.classList.add('red');
+      card.element.classList.add('red');
       await delay(FLIP_DELAY);
       this.activeCard.flipToBack();
+      activC.classList.remove('red');
+      card.element.classList.remove('red');
       await Promise.all([this.activeCard.flipToBack(), card.flipToBack()]);
-    }
-    this.activeCard = undefined;
-    this.isAnamation = false;
+    } if (this.activeCard.image == card.image) {
+      const activC = this.activeCard.element;
+      activC.classList.add('green');
+      card.element.classList.add('green');
+
+    } this.activeCard = undefined;
+      this.isAnamation = false;
+
+    // const activC = card.element;
+    // activC.classList.add('green');
+    // card.classList.add('green');
   //     сделать   зеленую карточку
   }
 }

@@ -1,11 +1,9 @@
 import { App } from '../../app';
-import { getRuls } from '../ruls/ruls';
 
 let app: HTMLElement | null;
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function locationResolver(location: string) {
   app = document.getElementById('app')!;
-  console.log(location);
   // eslint-disable-next-line default-case
   switch (location) {
     case '#/ruls/': {
@@ -34,7 +32,7 @@ export function locationResolver(location: string) {
       </div>
       </div>
           `;
-    break;
+      break;
     }
     case '#/score/': {
       app.innerHTML = `

@@ -43,6 +43,7 @@
   &__front {
 
     background-color: rgb(78, 73, 73);
+
   }
   &__back {
 
@@ -53,4 +54,13 @@
     transform: rotateY(180deg);
 
   }
+
+}
+  .red{
+    filter: saturate(9);
+
+}
+.green{
+  filter: opacity(30%);
+
 }

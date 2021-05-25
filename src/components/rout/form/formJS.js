@@ -8,10 +8,6 @@ const myModal = document.getElementById('btn-register');
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function form() {
   myModal.addEventListener('click', () => {
-
-
-    // const modal = document.querySelector('.modal');
-    // console.log(modal)
     const modalDialog = document.querySelector('.modal-dialog');
     const parent = document.createElement('div');
     parent.classList.add('modal-content');
@@ -67,7 +63,7 @@ export function form() {
     btnAdd.classList.add('add-user');
     btnAdd.innerHTML = 'add user';
 
-    //modal.appendChild(modalDialog);
+    // modal.appendChild(modalDialog);
     modalDialog.appendChild(parent);
     parent.appendChild(title);
     div.appendChild(btnClose);
