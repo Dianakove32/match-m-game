@@ -48,7 +48,7 @@ export class Game extends BaseComponent {
       activC.classList.remove('red');
       card.element.classList.remove('red');
       await Promise.all([this.activeCard.flipToBack(), card.flipToBack()]);
-    } if (this.activeCard.image == card.image) {
+      } if (this.activeCard.image === card.image) {
       const activC = this.activeCard.element;
       activC.classList.add('green');
       card.element.classList.add('green');
