@@ -6,6 +6,7 @@ import { navigation } from './components/navigation';
 import { getImgFromForm } from './components/getImgFromForm/getImgFromForm';
 import { locationResolver } from './components/rout/locationResolver';
 import { validation } from './components/rout/form/validaion';
+import { getValueSelect, getDifficaltiesSelect } from './constants';
 
 const appElement = document.getElementById('app');
 window.onload = () => {
@@ -34,7 +35,8 @@ btnRegister.addEventListener('click', () => {
 });
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const btnStart: Element = document.querySelector('btn-start')!;
-btnStart.addEventListener('click', () => {
-  if (appElement) new App(appElement).start();
-});
+  const btnStart: Element = document.querySelector('btn-start')!;
+  btnStart.addEventListener('click', () => {
+    if (appElement) new App(appElement).start();
+  });
+

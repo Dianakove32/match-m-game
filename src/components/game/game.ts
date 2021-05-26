@@ -23,8 +23,8 @@ export class Game extends BaseComponent {
     this.cardsField.clear();
     const cards = images.concat(images).map((url) => new Card(url)).sort(() => Math.random() - 0.5);
     cards.forEach((card) => card.element.addEventListener('click', () => this.cardHandler(card)));
-
     this.cardsField.addCards(cards);
+    //const everyC=cards.every(el=> el.element.contains('green'))
   }
 
   private async cardHandler(card: Card) {
@@ -52,9 +52,8 @@ export class Game extends BaseComponent {
       const activC = this.activeCard.element;
       activC.classList.add('green');
       card.element.classList.add('green');
-
     } this.activeCard = undefined;
-      this.isAnamation = false;
+    this.isAnamation = false;
 
     // const activC = card.element;
     // activC.classList.add('green');
