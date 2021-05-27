@@ -1,18 +1,33 @@
-.modal-content{
-  padding: 20px;
-}
-.form-control{
-  width: 420px;
-  margin: 20px 0;
-}
+// .modal-content{
+//   padding: 20px;
+// }
+// .form-control{
+//   width: 420px;
+//   margin: 20px 0;
+// }
+// input:invalid {
+//   border: 2px dashed red;
+// }
+
+// input:valid {
+//   border: 2px solid rgb(44, 173, 113);
+// }
+// .btn-container{
+// display: flex;
+// justify-content: space-around;
+// }
 input:invalid {
   border: 2px dashed red;
 }
-
-input:valid {
-  border: 2px solid rgb(44, 173, 113);
+.is-invalid{
+  border: 2px dashed red;
 }
-.btn-container{
-display: flex;
-justify-content: space-around;
+.is-valid{
+  border: 2px solid rgb(20, 177, 6);
+}
+input:valid {
+  border: 2px solid rgb(20, 177, 6);
+}
+.form-control{
+  margin-top:20px;
 }

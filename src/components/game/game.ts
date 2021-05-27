@@ -24,7 +24,7 @@ export class Game extends BaseComponent {
     const cards = images.concat(images).map((url) => new Card(url)).sort(() => Math.random() - 0.5);
     cards.forEach((card) => card.element.addEventListener('click', () => this.cardHandler(card)));
     this.cardsField.addCards(cards);
-    //const everyC=cards.every(el=> el.element.contains('green'))
+    // const everyC=cards.every(el=> el.element.contains('green'))
   }
 
   private async cardHandler(card: Card) {
@@ -48,7 +48,7 @@ export class Game extends BaseComponent {
       activC.classList.remove('red');
       card.element.classList.remove('red');
       await Promise.all([this.activeCard.flipToBack(), card.flipToBack()]);
-      } if (this.activeCard.image === card.image) {
+    } if (this.activeCard.image === card.image) {
       const activC = this.activeCard.element;
       activC.classList.add('green');
       card.element.classList.add('green');
@@ -58,6 +58,10 @@ export class Game extends BaseComponent {
     // const activC = card.element;
     // activC.classList.add('green');
     // card.classList.add('green');
-  //     сделать   зеленую карточку
+    //     сделать   зеленую карточку
+    // const arr=document.querySelectorAll('.card-container')
+    // if( arr.every(el=>el.includes('green')) ){
+    //   console.log('yeeeee')
+    // }
   }
 }

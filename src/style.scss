@@ -27,9 +27,24 @@ footer{
 .title-form{
   color: black;
 }
-.btn-start{
-  display: none;
-}
+// .btn-start{
+//   display: none;
+// }
 .btn-stop{
   display: none;
 }
+.settings-output{
+  padding-top: 30px;
+  color:red;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.settings-output-green{
+  padding-top: 30px;
+  color:rgb(21, 105, 46);
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+

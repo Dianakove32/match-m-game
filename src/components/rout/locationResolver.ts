@@ -1,4 +1,5 @@
-import { App } from '../../app';
+import { changeValue } from '../../constants';
+import '../../style.scss';
 
 let app: HTMLElement | null;
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -106,6 +107,7 @@ export function locationResolver(location: string) {
     case '#/settings/': {
       app.innerHTML = `
       <div class="container ">
+      <p class="settings-output">Select game settings</p>
       <p>Select game cards type</p>
       <select class="form-select card-type" aria-label="Default select example">
         <option selected>Open this select menu</option>
@@ -124,22 +126,6 @@ export function locationResolver(location: string) {
 `;
       break;
     }
-    case '#/game/': {
-      const appElement = document.getElementById('app');
-      if (!appElement) throw Error('App root element not found');
-      new App(appElement).start();
-      app.innerHTML = `
-<h1>${location}</h1>
-<p>game</p>
-`;
-      break;
-    }
   }
+changeValue()
 }
-
-// window.addEventListener('load', () => {
-//   const location = window.location.hash
-//   if(location){
-//     locationResolver(location)
-//   }
-// })
