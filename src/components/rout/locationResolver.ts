@@ -1,5 +1,6 @@
 import { changeValue } from '../../constants';
 import '../../style.scss';
+import { display } from '../timer/timer';
 
 let app: HTMLElement | null;
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -122,10 +123,12 @@ export function locationResolver(location: string) {
         <option value="middle">middle</option>
         <option value="hard">hard</option>
        </select>
+       <div class="content-timer  " id="stopwatch">00:00:00</div>
         </div>
 `;
       break;
     }
   }
-changeValue()
+changeValue();
+display()
 }

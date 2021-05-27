@@ -7,6 +7,8 @@ import { getDifficaltiesSelect, getValueSelect } from './constants';
 export class App {
   private readonly game : Game;
 
+  private readonly cardsField : CardsField;
+
   constructor(private readonly rootElement: HTMLElement) {
     this.game = new Game();
     this.game.element.classList.add('cards');

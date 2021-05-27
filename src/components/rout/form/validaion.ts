@@ -1,7 +1,5 @@
-import { getName } from '../../../constants';
-import { addUser, init } from '../../indexDB';
 import './form.scss';
-import { uid } from '../../indexDB';
+
 export function validation():string {
 
   let inputName: HTMLElement;
@@ -11,6 +9,8 @@ export function validation():string {
   const outputForm: HTMLElement = document.querySelector('.outputForm')!;
   const btnCancel: HTMLElement = document.querySelector('.cancel')!;
   const emailInput: HTMLElement = document.querySelector('.email')!;
+  const fileDisplayArea: HTMLElement = document.querySelector('#fileDisplayArea')!;
+  const fileInput: HTMLElement = document.querySelector('#fileInput')!;
   let isCorrectLastName: boolean;
   let isCorrectName: boolean;
 
@@ -73,6 +73,8 @@ export function validation():string {
     LastNameInput.classList.add('is-invalid');
     input.classList.add('is-invalid');
     inputBtn.disabled = true;
+    fileDisplayArea.innerHTML='';
+    fileInput.value='';
   })
 
 }

@@ -30,9 +30,9 @@ footer{
 // .btn-start{
 //   display: none;
 // }
-.btn-stop{
-  display: none;
-}
+// .btn-stop{
+//   display: none;
+// }
 .settings-output{
   padding-top: 30px;
   color:red;
@@ -47,4 +47,21 @@ footer{
   text-align: center;
   font-weight: bold;
 }
-
+.content-timer{
+  width: 200px;
+  color: #fff;
+    background-color: #4494db;
+    border-color: #6c757d;
+    margin-top: 20px;
+   margin-left: auto;
+   display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+color: white;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+}

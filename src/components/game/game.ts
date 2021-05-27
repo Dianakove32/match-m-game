@@ -21,6 +21,7 @@ export class Game extends BaseComponent {
   newGame(images: string[]) {
   // timer, score
     this.cardsField.clear();
+
     const cards = images.concat(images).map((url) => new Card(url)).sort(() => Math.random() - 0.5);
     cards.forEach((card) => card.element.addEventListener('click', () => this.cardHandler(card)));
     this.cardsField.addCards(cards);

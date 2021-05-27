@@ -17,3 +17,5 @@ window.onload = () => {
     locationResolver(newLocation);
   }));
 };
+
+

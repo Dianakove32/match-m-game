@@ -3,6 +3,8 @@ import './nav.scss';
 import { App } from '../app';
 import { getImgFromForm } from './getImgFromForm/getImgFromForm';
 import { validation } from './rout/form/validaion';
+import { startTime, stopTimer } from './timer/timer';
+
 const app = document.getElementById('main');
 export function navigation():void {
   const templ = `
@@ -26,8 +28,9 @@ export function navigation():void {
           <a class="nav-link"
           href="#/settings/"
           >game settings</a>
-        </li><button href="#/game/"
-         id='btn-start' class="btn btn-light start btn-start">Start game</button>
+        </li>
+        <button href="#/game/" id='btn-start' class="btn btn-light start btn-start">Start game</button>
+        <button  id='btn-stop' class="btn btn-light btn-stop">Stop game</button>
          <button id="registr-btn"
          type="button"
          class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"">Register new player</button>
@@ -110,24 +113,27 @@ export function navigation():void {
   const header = document.createElement('header');
   header.innerHTML = templ;
   app.appendChild(header);
-  // const location = window.location.hash;
-  // console.log(location);
-  // if (location) {
-  //   locationResolver(location);
-  // }
 
   document.querySelectorAll('.nav-link')?.forEach((x) => x.addEventListener('click', (e) => {
     const newLocation = e.view.location.hash;
-const link = e.target.innerHTML
-link.classList.add('active')
+    const link = e.target.innerHTML;
+    link.classList.add('active');
     locationResolver(newLocation);
   }));
   const btnStart = document.querySelector('#btn-start')!;
+  const btnStop = document.querySelector('#btn-stop')!;
   btnStart.addEventListener('click', () => {
     const appElement = document.getElementById('app');
+    const field = document.querySelector('.cards-field');
     if (appElement) {
+     field?.innerHTML = '';
+      startTime();
       new App(appElement).start();
     }
+  });
+  btnStop.addEventListener('click', () => {
+    stopTimer();
+    const appElement = document.getElementById('app');
   });
   getImgFromForm();
   // let btnRegister: HTMLElement;
